@@ -146,5 +146,8 @@ int main(int argc, char* argv[])
 
     if(afpResource != NULL)
         free(afpResource);
+
+    if(fileData != NULL)
+        free(fileData);
 }
 
