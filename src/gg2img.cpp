@@ -94,7 +94,11 @@ void writefile(const char* imgFileName, const char* destFileName, const unsigned
     parms.modWhen     = time(0);
     parms.storageType = A2FileProDOS::kStorageExtended;
 
-    A2File* a2File;
+    A2File* a2File = NULL;
+    a2File = diskFS->GetFileByName(destFileName);
+    if(a2File != NULL)
+        dierr = diskFS->DeleteFileW(a2File);
+
     dierr = diskFS->CreateFile(&parms, &a2File);
 
     A2FileDescr* a2FileDescr;
@@ -115,7 +119,7 @@ int main(int argc, char* argv[])
         return usage();
 
     char* inputFile = argv[1];
-    char* imgFile = argv[2];
+    char* imgFile   = argv[2];
 
     AFP_Info* afpInfo = NULL;
     unsigned char* afpResource = NULL;
@@ -133,7 +137,10 @@ int main(int argc, char* argv[])
 
     NuSetGlobalErrorMessageHandler(NufxErrorMsgHandler);
 
-    writefile(argv[2], "asdf", fileData, fileDataSize, afpResource, fileRsrcSize, afpInfo);
+    char fileName[_MAX_FNAME];
+    errno_t err = _splitpath_s(argv[1], NULL, 0, NULL, 0, fileName, _MAX_FNAME, NULL, 0);
+
+    writefile(argv[2], fileName, fileData, fileDataSize, afpResource, fileRsrcSize, afpInfo);
 
     DiskImgLib::Global::AppCleanup();
 
