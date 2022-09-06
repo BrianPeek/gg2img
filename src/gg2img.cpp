@@ -25,8 +25,10 @@ struct AFP_Info {
 
 int usage()
 {
-    printf("Golden Gate -> Image File\n");
-    printf("gg2img [IIgs file] [Image file]\n\n");
+    printf("\nGolden Gate -> Image File (v1.0)\n");
+    printf("Inserts a file built with Golden Gate into a disk image file (.po), preserving resource information\n");
+    printf("https://github.com/BrianPeek/gg2img\n");
+    printf("\nUsage: gg2img [IIgs file] [Image file]\n\n");
     return -1;
 }
 
