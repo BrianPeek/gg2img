@@ -9,7 +9,8 @@ Builds with Visual Studio 2022.  Earlier versions may work as well.
 `gg2img [IIgs file built with Golden Gate] [disk image file]`
 
 ## Dependencies
-GG2IMG uses the following libraries. Please see the `license.txt` file in the `libs` directory for details.
+GG2IMG uses the following libraries, taken from [CiderPress](https://github.com/fadden/ciderpress). Please see the `license.txt` file in the `libs` directory for details.
 
+- DiskImg
 - NufxLib
 - Zlib
