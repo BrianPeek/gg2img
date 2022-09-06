@@ -9,10 +9,6 @@
       <UniqueIdentifier>{def4def1-c9b0-48b3-a80b-c137f7ebf9bd}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{ed4624b4-6280-4672-8e7f-e8aac6e178ef}</UniqueIdentifier>
-      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CP_ntddscsi.h">
