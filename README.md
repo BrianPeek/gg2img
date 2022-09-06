@@ -1,5 +1,6 @@
 # GG2IMG
 GoldenGate -> Image FIle
+
 Inserts a file built with [Golden Gate](http://goldengate.gitlab.io/) into a disk image file (.po), preserving resource information
 
 ## Build
