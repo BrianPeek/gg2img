@@ -1,6 +1,6 @@
 # GG2IMG
 GoldenGate -> Image FIle
-Inserts a file built with Golden Gate into a disk image file (.po), preserving resource information
+Inserts a file built with [Golden Gate](http://goldengate.gitlab.io/) into a disk image file (.po), preserving resource information
 
 ## Build
 Builds with Visual Studio 2022.  Earlier versions may work as well.
