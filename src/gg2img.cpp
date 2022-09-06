@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstdint>
+#include <time.h>
 #include <sys/types.h>
 #include "../libs/diskimg/DiskImg.h"
 #include "../libs/diskimg/DiskImgDetail.h"

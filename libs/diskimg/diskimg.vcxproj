@@ -168,10 +168,6 @@
     <ProjectReference Include="..\zlib\zlib.vcxproj">
       <Project>{b66109f4-217b-43c0-86aa-eb55657e5ac0}</Project>
     </ProjectReference>
-    <ProjectReference Include="libhfs\libhfs.vcxproj">
-      <Project>{0fa742e9-8c07-43dd-aff8-ce31faf70821}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ASPI.cpp" />

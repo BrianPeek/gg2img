@@ -2143,7 +2143,7 @@ void DiskFSHFS::CreateFakeFile(void)
 /*
  * We could do this, but there's not much point.
  */
-DIError GetFreeSpaceCount(long* pTotalUnits, long* pFreeUnits,
+DIError DiskFSHFS::GetFreeSpaceCount(long* pTotalUnits, long* pFreeUnits,
     int* pUnitSize) const
 {
     return kDIErrNotSupported;

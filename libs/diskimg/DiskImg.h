@@ -27,7 +27,7 @@
 #include <stdint.h>
 #include <assert.h>
 
-//#define EXCISE_GPL_CODE
+#define EXCISE_GPL_CODE
 
 /* Windows DLL stuff */
 #ifdef _WIN32

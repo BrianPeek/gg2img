@@ -144,9 +144,6 @@
     <ProjectReference Include="..\libs\diskimg\diskimg.vcxproj">
       <Project>{0cfe6fad-0126-4e99-8625-c807d1d2aaf4}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\libs\diskimg\libhfs\libhfs.vcxproj">
-      <Project>{0fa742e9-8c07-43dd-aff8-ce31faf70821}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\libs\nufxlib\nufxlib.vcxproj">
       <Project>{c48ae53b-3dcb-43b1-9207-b7c5b6bb78af}</Project>
     </ProjectReference>
