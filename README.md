@@ -16,6 +16,6 @@ GG2IMG uses the following libraries, taken from [CiderPress](https://github.com/
 - NufxLib
 - Zlib
 
-## Links
+## Links to Similar Tools
 - [Cadius](https://www.brutaldeluxe.fr/products/crossdevtools/cadius/) (expects resource forks to be in separate files, so not entirely compatible with Golden Gate)
 - [Cadius with improvements](https://github.com/mach-kernel/cadius) (and Linux support)
