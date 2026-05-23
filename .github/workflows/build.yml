@@ -60,6 +60,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Compute build date
         shell: pwsh
         run: |
@@ -75,6 +78,8 @@ jobs:
       - name: Package
         shell: pwsh
         run: |
+          Copy-Item README.md gg2img\
+          Copy-Item LICENSE gg2img\
           $zip = "gg2img-x64-$env:BUILD_DATE.zip"
           Compress-Archive -Path gg2img\* -DestinationPath $zip
           "ASSET=$zip" | Out-File -FilePath $env:GITHUB_ENV -Append
