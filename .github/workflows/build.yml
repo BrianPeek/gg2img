@@ -21,17 +21,17 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Add MSBuild to PATH
-        uses: microsoft/setup-msbuild@v2
+        uses: microsoft/setup-msbuild@v3
 
       - name: Build
         run: msbuild ${{ env.SOLUTION_FILE }} /m /p:Configuration=${{ matrix.configuration }} /p:Platform=${{ env.PLATFORM }}
 
       - name: Upload Debug artifacts
         if: matrix.configuration == 'Debug'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: gg2img-Debug
           path: |
@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload Release artifacts
         if: matrix.configuration == 'Release'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: gg2img-Release
           path: |
@@ -61,7 +61,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Compute build date
         shell: pwsh
@@ -70,7 +70,7 @@ jobs:
           "BUILD_DATE=$stamp" | Out-File -FilePath $env:GITHUB_ENV -Append
 
       - name: Download Release artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: gg2img-Release
           path: gg2img
@@ -85,7 +85,7 @@ jobs:
           "ASSET=$zip" | Out-File -FilePath $env:GITHUB_ENV -Append
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: build-${{ env.BUILD_DATE }}
           name: Build ${{ env.BUILD_DATE }}
